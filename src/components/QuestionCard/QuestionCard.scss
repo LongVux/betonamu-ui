@@ -1,0 +1,55 @@
+.questionCard {
+  max-width: 500px;
+  min-width: 300px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+  padding: 1%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  .cardHeader {
+    font-weight: bolder;
+  }
+
+  .questionContainer {
+    padding: 2%;
+    margin-bottom: 10px; 
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(219, 219, 219, 0.404);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  }
+
+  .answersContainer{
+    .answer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 3%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    }
+
+    .answer:hover {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+
+    .chosenAnswer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 3%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: rgba(36, 164, 236, 1) 0px 0px 0px 3px;
+    }
+  }
+}

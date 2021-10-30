@@ -1,0 +1,50 @@
+.pageHeader {
+
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 400px;
+  background-color: white;
+
+  .mainContent {
+    min-height: 300px;
+    max-height: 350px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .backgroundImage {
+      width: 100%;
+    }
+
+    .noImg {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(36, 164, 236, 1);
+    }
+
+    .title {
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      z-index: 1;
+      width: 65%;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+
+  .description {
+    width: 60%;
+    padding: 20px 0px;
+
+    * {
+      text-align: center;
+    }
+  }
+}
