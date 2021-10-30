@@ -11,7 +11,7 @@
     min-height: 80px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     box-shadow: 0 9px 15px -10px rgba(36, 164, 236, 1);
     flex-wrap: wrap;
     padding: 0 6%;
@@ -20,10 +20,7 @@
 
     .tabTitle {
       margin: 0px;
-      height: 80px;
-      font-size: 60px;
-      min-width: 400px;
-      font-weight: bolder;
+      min-width: 300px;
     }
 
     .tabSearchInput {
@@ -43,12 +40,10 @@
 
   .tabContent {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 0 6%;
-    max-height: 400px;
-    overflow: auto;
   }
 
   .tabFooter {

@@ -1,9 +1,9 @@
 .menuBar {
   padding: 0;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.514);
   position: fixed;
   z-index: 1000;
-  width: 100%;
+  width: 100vw;
   box-shadow: 0px 3px 16px rgba(36, 164, 236, 1);
 
   .menuBarSearch {

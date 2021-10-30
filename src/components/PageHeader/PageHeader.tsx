@@ -25,10 +25,10 @@ export default function PageHeader () {
         {props.backgroundImage? 
           <img src={props.backgroundImage} className="backgroundImage" alt={props.title}/> :
           <div className="backgroundImage noImg" />}
-        <Typography.Title className="title">{props.title}</Typography.Title>
+        <h1 className="title">{props.title}</h1>
       </div>
       <div className="description">
-        <Typography.Title level={4} italic type="secondary">{props.description}</Typography.Title>
+        <h3>{props.description}</h3>
       </div>
     </div>
   )

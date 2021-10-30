@@ -1,6 +1,5 @@
 .pageHeader {
-
-  margin-top: 60px;
+  margin-top: 64px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -31,11 +30,11 @@
       left: 50%;
       transform: translate(-50%, 0%);
       z-index: 1;
-      width: 65%;
       text-align: center;
       background-color: rgba(255, 255, 255, 0.5);
-      padding: 10px;
+      padding: 1%;
       border-radius: 10px;
+      width: 70vw;
     }
   }
 
