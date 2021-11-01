@@ -1,24 +1,10 @@
 body {
   margin: 0;
-  font-family: "Balsamiq Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Balsamiq Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-}
-
-h1 {
-  font-size: 4vw;
-}
-h2 {
-  font-size: 3vw;
-}
-h3 {
-  font-size: 2vw;
-}
-h4 {
-  font-size: 1vw;
 }
 
 p {
@@ -26,8 +12,7 @@ p {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 body::-webkit-scrollbar-track {
@@ -41,4 +26,12 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
   background-color: rgba(36, 164, 236, 1);
+}
+
+.generalCard {
+  display: block;
+  padding: 1%;
+  background-color: white;
+  border-radius: 1%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

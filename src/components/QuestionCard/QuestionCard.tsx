@@ -26,7 +26,7 @@ export default function QuestionCard() {
           .map((_, index) => (
             <div
               className={
-                index == currentChosenAnswerIndex ? "chosenAnswer" : "answer"
+                index === currentChosenAnswerIndex ? "chosenAnswer" : "answer"
               }
               onClick={() => editable && setCurrentChosenAnswerIndex(index)}
             >

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Layout, Menu, Input } from "antd";
 import "./MenuBar.scss";
+import { Link } from "react-router-dom";
 
 const { Header } = Layout;
 
@@ -27,7 +28,7 @@ export default function MenuBar () {
         selectedKeys={[selectedKey]}>
         <Menu.Item
           key="homepage">
-          Home Page
+          <Link to="/">Betonamu@</Link>
         </Menu.Item>
         <Menu.Item
           key="articles">
@@ -35,7 +36,7 @@ export default function MenuBar () {
         </Menu.Item>
         <Menu.Item
           key="studyMaterials">
-          Study Materials
+          <Link to="/studyMaterial">Study Materials</Link>
         </Menu.Item>
 
         <Menu.Item

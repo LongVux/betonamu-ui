@@ -1,5 +1,6 @@
+@import "../../styles/color";
+
 .pageHeader {
-  margin-top: 64px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -21,7 +22,7 @@
     .noImg {
       width: 100vw;
       height: 100vh;
-      background-color: rgba(36, 164, 236, 1);
+      background-color: $color-default;
     }
 
     .title {
@@ -31,10 +32,10 @@
       transform: translate(-50%, 0%);
       z-index: 1;
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.7);
       padding: 1%;
       border-radius: 10px;
-      width: 70vw;
+      max-width: 70vw;
     }
   }
 

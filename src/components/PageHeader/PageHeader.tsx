@@ -1,7 +1,5 @@
 import React from "react";
 import "./PageHeader.scss"
-import image from "./demo-background-image.jpg"
-import { Typography } from "antd";
 
 type PageHeaderProps = {
   backgroundImage?: string;
@@ -9,15 +7,7 @@ type PageHeaderProps = {
   description?: string;
 }
 
-const mockProps : PageHeaderProps = {
-  backgroundImage: image,
-  title: "Henlo, this is a very long title that may break the responsiveness of the page header.",
-  description: "Henlo, this is a very long title that may break the responsiveness of the page header. Henlo, this is a very long title that may break the responsiveness of the page header."
-}
-
-export default function PageHeader () {
-
-  const props = mockProps
+export default function PageHeader (props: PageHeaderProps) {
 
   return (
     <div className="pageHeader">

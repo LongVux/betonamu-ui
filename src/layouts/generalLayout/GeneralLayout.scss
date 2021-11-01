@@ -1,0 +1,31 @@
+.generalLayout {
+  .generalLayoutContent {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    .mainContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      max-width: 800px;
+      min-width: 300px;
+      margin: 1%;
+      padding: 1%;
+      background-color: white;
+    }
+    
+    .sideContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      min-width: 300px;
+      margin: 1%;
+      padding: 1%;
+      background-color: white;
+    }
+  }
+}

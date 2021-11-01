@@ -14,9 +14,9 @@ export default function AppTab (props: AppTabProps) {
   return (
     <div className="appTab">
       <div className="tabHeader">
-        <h1 className="tabTitle">
+        <h2 className="tabTitle">
           {props.title}
-        </h1>
+        </h2>
         {props.searchable && 
           <Input.Search 
           placeholder="Looking for something?" 
