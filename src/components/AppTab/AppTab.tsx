@@ -1,9 +1,10 @@
 import { Input, Pagination } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import "./AppTab.scss";
 
 type AppTabProps = {
-  children: React.ReactNode;
+  dataSource: React.ReactNode[];
+  pageLimit?: number;
   title?: String;
   footer?: React.ReactNode;
   searchable?: boolean;
@@ -11,6 +12,15 @@ type AppTabProps = {
 }
 
 export default function AppTab (props: AppTabProps) {
+
+  const offset: number = props.pageLimit || props.dataSource.length
+
+  const [data, setData] = useState(props.dataSource.slice(0, offset))
+
+  const handleChangePage = (page: number) => {
+    setData(props.dataSource.slice((page - 1)*offset, page*offset))
+  }
+
   return (
     <div className="appTab">
       <div className="tabHeader">
@@ -27,10 +37,15 @@ export default function AppTab (props: AppTabProps) {
         }
       </div>
       <div className="tabContent" id="style-5">
-        {props.children}  
+        {data}
       </div>
       <div className="tabFooter">
-        <Pagination defaultCurrent={6} total={500} />
+        <Pagination 
+          defaultCurrent={1}
+          pageSize={offset} 
+          total={props.dataSource.length}
+          size="small"
+          onChange={handleChangePage} />
       </div>
     </div>
   )

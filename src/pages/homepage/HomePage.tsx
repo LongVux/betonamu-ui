@@ -5,13 +5,19 @@ import PageHeader from "../../components/PageHeader/PageHeader";
 import Carousel from "./Carousel";
 import image from "./homepage-background.jpg"
 import AppCard from "../../components/AppCard/AppCard";
+import { articleListMock } from "../../__mocks__/articleMork";
+import { testListMock } from "../../__mocks__/testMock";
 
 const { Content } = Layout;
 
-export default function HomePage () {
+export default function HomePage() {
+
+  console.log(articleListMock)
+  console.log(testListMock)
+
   return (
     <Layout>
-      <PageHeader 
+      <PageHeader
         title="BETONAMU"
         description="A web helping you with japanese learning."
         backgroundImage={image}
@@ -20,10 +26,15 @@ export default function HomePage () {
         <Carousel />
         <AppTab
           title="Top view"
-        >
-          {Array(10).fill(0).map((_, index) => { return <AppCard key={index} /> })
+          pageLimit={5}
+          dataSource={articleListMock.map((article, index) => {
+            return <AppCard
+              key={index}
+              dataSource={article} 
+              link={`/article/${article.id}`}/>
+          })
           }
-        </AppTab>
+        />
       </Content>
     </Layout>
   )

@@ -32,7 +32,7 @@ export default function MenuBar () {
         </Menu.Item>
         <Menu.Item
           key="articles">
-          Articles
+          <Link to="/article">Articles</Link>
         </Menu.Item>
         <Menu.Item
           key="studyMaterials">

@@ -3,7 +3,7 @@
   width: 90vw;
   min-width: 300px;
   margin: auto;
-  margin-top: 20px;
+  margin-bottom: 20px;
   min-height: 200px;
   border-radius: 20px;
   background-color: white;
@@ -15,7 +15,6 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 1% 6%;
-    margin: 1% 0%;
 
     .tabTitle {
       margin: 0px;
@@ -39,7 +38,7 @@
 
   .tabContent {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     padding: 0 6%;

@@ -16,9 +16,12 @@ export default function GeneralLayout(props: GeneralLayoutProps) {
       <div className="mainContent">
         {props.children}
       </div>
-      <div className="sideContent">
-        <h4 className="generalCard">Some further information can be placed here</h4>
-      </div>
+      {
+        props.metaData &&
+        <div className="sideContent">
+          {props.metaData}
+        </div>
+      }
     </Content>
   </Layout>
 }

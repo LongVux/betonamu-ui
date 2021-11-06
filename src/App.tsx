@@ -1,5 +1,6 @@
 import React from 'react';
 import MenuBar from './components/MenuBar/MenuBar';
+import ScrollToTop from './components/ScrollToTop';
 import { RenderRoutes } from './routes/routes';
 import './styles/App.scss';
 import './styles/index.scss';
@@ -13,22 +14,6 @@ function App() {
       
       {/* router for pages */}
       <RenderRoutes />
-
-      {/* <TestPage /> */}
-
-      {/* <TestFrame>
-        <PageHeader />
-        <AppTab
-          title="This is a Tab"
-          searchable={true}
-          onSearch={(value: string) => console.log(value)}
-        >
-          {Array(10).fill(0).map((_, index) => { return <AppCard key={index} /> })
-          }
-        </AppTab>
-
-        <QuestionCard />
-      </TestFrame> */}
     </>
   );
 }

@@ -3,14 +3,6 @@ import { Carousel as AntCarousel } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import "./Carousel.scss"
 
-const contentStyle : React.CSSProperties = {
-  height: '300px',
-  color: '#fff',
-  lineHeight: '300px',
-  textAlign: 'center',
-  background: '#364d79',
-};
-
 export default function Carousel() {
   return (
     <div className="carouselContainer">
@@ -19,18 +11,19 @@ export default function Carousel() {
         arrows 
         prevArrow={<LeftOutlined />} 
         nextArrow={<RightOutlined />}
+        className="carousel"
       >
-        <div>
-          <h3 style={contentStyle}>1</h3>
+        <div className="slide">
+          <h2>Learn Japanese through Articles!</h2>
         </div>
-        <div>
-          <h3 style={contentStyle}>2</h3>
+        <div className="slide">
+          <h2>Practice Japanese with Reading & Listening Test!</h2>
         </div>
-        <div>
-          <h3 style={contentStyle}>3</h3>
+        <div className="slide">
+          <h2>Find the Japanese Material with every Level!</h2>
         </div>
-        <div>
-          <h3 style={contentStyle}>4</h3>
+        <div className="slide">
+          <h2>Contribute and Earn Credit & MONEY!</h2>
         </div>
       </AntCarousel>
     </div>
