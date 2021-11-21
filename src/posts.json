@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "My First Post, Yo\r",
+    "author": "Dave Jones\r",
+    "date": "December 11, 2021\r",
+    "content": "\r\n# Welcome to My Blog\r\n\r\n*It's a beautiful thing.*"
+  },
+  {
+    "id": 2,
+    "title": "My Second Post, Yo\r",
+    "author": "Maria Smith\r",
+    "date": "December 11, 2021\r",
+    "content": "\r\n# Welcome to Maria's Blog\r\n\r\n*It's a beautiful thing.*"
+  }
+]

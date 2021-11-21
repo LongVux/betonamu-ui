@@ -49,5 +49,38 @@
       border-radius: 10px;
       box-shadow: rgba(36, 164, 236, 1) 0px 0px 0px 3px;
     }
+
+    .correctAnswer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 3%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: rgba(9, 170, 9, 0.329) 0px 0px 0px 3px;
+    }
+
+    .rightAnswer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 3%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: rgb(9, 170, 9) 0px 0px 0px 3px;
+    }
+
+    .wrongAnswer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 3%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: rgb(192, 29, 29) 0px 0px 0px 3px;
+    }
   }
 }

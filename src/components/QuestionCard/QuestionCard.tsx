@@ -2,9 +2,44 @@ import { Alert, Button } from "antd";
 import React, { useState } from "react";
 import "./QuestionCard.scss";
 
+type QuestionCardProps = {
+  editable: boolean,
+}
+
 export default function QuestionCard() {
+  const correctIndex = 3;
   const [currentChosenAnswerIndex, setCurrentChosenAnswerIndex] = useState(-1);
-  const [editable, setEditable] = useState(false);
+  const [editable, setEditable] = useState(true);
+  const [showExplanation, setExplanation] = useState(false);
+
+  const handleViewExplain = () => {
+    setEditable(false);
+    setExplanation(true);
+  }
+
+  const getAnswerClassName = (answerIndex: number) => {
+    let className = "answer";
+
+    if (editable) {
+      if (answerIndex === currentChosenAnswerIndex) {
+        className = "chosenAnswer";
+      }
+    } else {
+      if (correctIndex === answerIndex) {
+        className = "correctAnswer";
+      }
+      if (answerIndex === currentChosenAnswerIndex &&
+        correctIndex === currentChosenAnswerIndex) {
+        className = "rightAnswer";
+      }
+      if (answerIndex === currentChosenAnswerIndex &&
+        correctIndex !== currentChosenAnswerIndex) {
+        className = "wrongAnswer";
+      }
+    }
+
+    return className;
+  }
 
   return (
     <div className="questionCard">
@@ -25,23 +60,21 @@ export default function QuestionCard() {
           .fill(0)
           .map((_, index) => (
             <div
-              className={
-                index === currentChosenAnswerIndex ? "chosenAnswer" : "answer"
-              }
+              className={getAnswerClassName(index)}
               onClick={() => editable && setCurrentChosenAnswerIndex(index)}
             >
-              <div className="answerContent">{`This is anwser ${
-                index + 1
-              }`}</div>
+              <div className="answerContent">{`This is answer ${index + 1
+                }`}</div>
             </div>
           ))}
       </div>
 
       <div className="cardFooter">
-        <Button type="primary" onClick={() => setEditable(!editable)}>
+        <Button type="primary" onClick={handleViewExplain}>
           Details
         </Button>
         <Alert
+          className={showExplanation ? "" : "hidden"}
           message="Error Text"
           description="Error Description Error Description Error Description Error Description"
           type="error"

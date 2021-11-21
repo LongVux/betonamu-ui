@@ -1,39 +1,20 @@
 import React from "react";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import GeneralLayout from "../../layouts/generalLayout/GeneralLayout";
+import postList from "../../posts.json";
 
 export default function ArticlePage() {
   return (
     <GeneralLayout
       header={<PageHeader
-        title="Article 001"
+        title={postList[0].title}
         description="Please enjoy the reading!"
       />}
       metaData={
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus libero nulla, pretium vitae volutpat id, porttitor eget turpis. Suspendisse accumsan neque at tellus malesuada, a vehicula est congue. Sed aliquet volutpat diam, vulputate facilisis felis ornare ac. Sed egestas augue eu dui iaculis vehicula iaculis a arcu. Donec vel tellus in felis bibendum tincidunt."
+        postList[0].author
       }
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus libero nulla, pretium vitae volutpat id, porttitor eget turpis. Suspendisse accumsan neque at tellus malesuada, a vehicula est congue. Sed aliquet volutpat diam, vulputate facilisis felis ornare ac. Sed egestas augue eu dui iaculis vehicula iaculis a arcu. Donec vel tellus in felis bibendum tincidunt. Ut eu libero eget felis imperdiet faucibus. Pellentesque bibendum malesuada turpis, sit amet aliquam eros semper non. Duis enim justo, interdum sit amet dolor quis, vulputate porta erat. Nam non quam eros. Nunc sollicitudin cursus enim eget congue. Aenean quis commodo eros. Phasellus accumsan interdum pellentesque.
-
-      Vivamus porta fermentum eleifend. Cras venenatis ultricies dignissim. Donec volutpat ex neque, vitae auctor mauris auctor ut. Pellentesque vestibulum fringilla lorem eget porta. Quisque eget erat nec orci facilisis commodo. Nullam vel ultricies arcu. Sed suscipit posuere tortor, tincidunt elementum nisi auctor ac. Pellentesque suscipit mauris et est luctus imperdiet. Donec nisi sem, pretium sit amet scelerisque at, convallis eget magna. Sed vitae ipsum ac dolor ultricies euismod. Proin vel risus consectetur, dictum sem ac, pulvinar risus. Sed sapien sapien, consequat non odio dictum, ultricies blandit tortor. Pellentesque accumsan molestie nunc. Etiam ut orci placerat, ornare eros quis, tempus erat.
-
-      In egestas tortor non leo pulvinar, at suscipit nulla lacinia. Sed rutrum dolor diam, venenatis lacinia tellus dignissim at. Maecenas rhoncus facilisis felis, vitae rhoncus ex vestibulum quis. Cras eu tortor et massa maximus tincidunt nec vitae elit. Nunc consequat leo purus, eu pharetra dolor malesuada id. Aliquam hendrerit sapien ac turpis mollis, et sagittis risus varius. Mauris lobortis bibendum sem, et mattis erat ullamcorper ut. Fusce vulputate lorem lacus, eu aliquet est malesuada eget. Vivamus sed libero faucibus, interdum sem eget, venenatis dolor. Aenean placerat purus metus, elementum facilisis diam dictum eget. Donec facilisis nulla malesuada, egestas augue quis, blandit est. Sed quis lacinia lectus, et condimentum diam. Aenean eget lorem eget tellus pellentesque aliquet. Aenean fringilla pellentesque dolor at sodales.
-
-      Nunc at purus quis purus semper laoreet vel a elit. Vestibulum vel massa elit. Nullam sit amet volutpat ante, tincidunt tincidunt dui. Fusce a turpis quis arcu mattis aliquet. Donec vitae arcu sagittis, ornare felis non, finibus sem. Sed eu malesuada velit. Sed lobortis facilisis purus. Sed enim felis, varius non magna ut, vulputate consectetur nibh. Maecenas hendrerit gravida est, gravida rutrum arcu sagittis ut. Quisque lobortis, ex gravida lacinia scelerisque, libero massa dictum lectus, vel egestas tellus nisi vitae felis. Maecenas vehicula sapien mauris, a efficitur sem tincidunt vel. Phasellus quis sodales augue. Aliquam semper et velit vitae lacinia. Nullam quis blandit quam. Cras lorem quam, iaculis ut felis vel, ullamcorper auctor ligula.
-
-      Phasellus id rhoncus massa, id finibus neque. Duis sit amet purus sit amet elit bibendum pharetra. Donec posuere volutpat neque sed fringilla. Suspendisse egestas diam quis erat tempus, vel bibendum sapien facilisis. Donec ullamcorper, arcu et malesuada pulvinar, dui erat pellentesque tellus, ut pellentesque ipsum quam quis arcu. Cras eleifend augue justo, vitae aliquet tellus varius a. Morbi at laoreet augue, vitae aliquet tortor. Mauris lacus tortor, volutpat vitae lobortis id, suscipit at purus. Aliquam sit amet rhoncus lacus, ac dapibus metus. Proin dolor nulla, mollis nec felis in, vestibulum suscipit urna. Aenean interdum, orci facilisis maximus cursus, leo dolor gravida ipsum, commodo aliquet enim tortor in diam. Cras viverra condimentum arcu eu maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-      Donec lorem urna, fringilla vel porta sed, blandit in nisi. Donec vehicula elit leo, sit amet elementum leo commodo id. Phasellus luctus enim purus, at volutpat orci gravida at. Fusce vel sollicitudin risus. Donec imperdiet, est nec faucibus ornare, justo nisi malesuada mauris, eget vestibulum urna nulla at quam. Etiam varius enim faucibus lectus mollis, quis tincidunt mi luctus. Nullam rutrum leo et sapien aliquam tempor. In tempor at nisl nec consequat. Proin tristique metus nec ornare mollis. Nullam auctor vitae risus ut lacinia. Cras scelerisque a magna at interdum. Etiam posuere tincidunt urna in pretium. Nunc luctus cursus tellus sit amet iaculis. Suspendisse viverra ut tellus id accumsan. Donec quis lectus hendrerit, fringilla sapien id, tempor erat.
-
-      Pellentesque dapibus justo eget turpis tristique, eu dapibus ipsum bibendum. Proin dignissim, nisl in mollis sodales, lacus quam efficitur nisi, at dictum justo eros sed nunc. Maecenas a massa justo. In porta malesuada consectetur. Mauris porttitor porttitor eros sed tristique. Vivamus posuere eu libero vel tincidunt. Morbi eget metus dictum, consectetur ipsum ultricies, congue libero.
-
-      Donec hendrerit sapien justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris luctus lorem volutpat ligula ultrices suscipit. In sit amet felis eget magna lacinia fringilla hendrerit ut lorem. Duis venenatis justo at gravida varius. Nullam finibus pharetra nibh in ullamcorper. Curabitur et molestie erat. Cras commodo lacus at arcu congue, vel ultricies mauris elementum. Mauris et urna finibus, aliquet mauris ut, eleifend libero. Donec a dapibus sem. Vivamus at ipsum tellus. Sed facilisis pretium mauris id ultrices. Vivamus malesuada urna id arcu ultrices, hendrerit maximus ante facilisis.
-
-      Pellentesque vulputate nisl nisi, non consequat augue iaculis at. Fusce ultricies congue elit pretium mattis. Vivamus at metus ullamcorper, scelerisque eros et, egestas magna. Nam semper arcu eu lorem maximus, et laoreet lorem vehicula. Integer sodales sem libero, vitae pretium lacus venenatis vitae. Ut ultricies nulla a libero congue tincidunt. Aenean vitae egestas augue. Proin mauris nisi, tincidunt a lorem sed, dapibus porta lacus. Proin eget risus lacus. Integer libero est, eleifend in euismod id, malesuada in ipsum. Sed cursus sagittis dui, eu ultrices justo commodo sit amet.
-
-      Phasellus sit amet mi eget magna tincidunt dignissim vel id massa. Ut in laoreet magna, eget rutrum ligula. Vivamus quis scelerisque est, quis vestibulum neque. Phasellus ultrices ante at ullamcorper porta. Mauris libero est, placerat vel iaculis vitae, ornare vitae augue. Phasellus fermentum nulla in semper posuere. Integer lacus ligula, pulvinar et lorem sed, pulvinar vulputate libero. Curabitur at dolor sed justo varius mattis at ut diam. Integer sit amet ullamcorper orci, et accumsan ex. Suspendisse imperdiet aliquet arcu, ut fringilla magna fringilla.
-
-      Generated 10 paragraphs, 1000 words, 6801 bytes of Lorem Ipsum
+      {postList[0].content}
     </GeneralLayout>
   )
 }

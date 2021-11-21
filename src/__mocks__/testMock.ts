@@ -19,7 +19,7 @@ export const testListMock : Test[] = Array(10).fill(0).map((_, index) => {
     id: "test" + index,
     title: index + ". Let test the " + index + " problem(s) of Japanese",
     testType: (index % 2) ? TestType.Listening : TestType.Reading,
-    level: `N${Math.floor(Math.random() * 4 + 1)}` as unknown as Level,
+    level: [`N${Math.floor(Math.random() * 4 + 1)}` as unknown as Level],
     description: "The test is about japanese and some knowledge should be test. Let's try this now!",
     tag: generateRandomSubject(index),
   }

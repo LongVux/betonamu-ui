@@ -33,7 +33,7 @@ export interface Test {
   id: string;
   title: string;
   tag: string[];
-  level: Level;
+  level: Level[];
   description: string;
 }
 

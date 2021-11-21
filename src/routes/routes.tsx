@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router";
 import ArticleListPage from "../pages/articleListPage/ArticleListPage";
 import ArticlePage from "../pages/articlePage/ArticlePage";
 import HomePage from "../pages/homepage/HomePage";
+import SearchPage from "../pages/searchPage/SearchPage";
 import StudyMaterialPage from "../pages/studyMaterialpage/StudyMaterialPage";
 import TestPage from "../pages/testpage/TestPage";
 
@@ -36,6 +37,12 @@ export const ROUTES = [
     key: "articleDetail",
     exact: true,
     component: () => <ArticlePage />
+  },
+  {
+    path: "/search", 
+    key: "search",
+    exact: true,
+    component: () => <SearchPage />
   },
 ]
 

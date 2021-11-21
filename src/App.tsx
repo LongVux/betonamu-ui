@@ -1,6 +1,5 @@
 import React from 'react';
 import MenuBar from './components/MenuBar/MenuBar';
-import ScrollToTop from './components/ScrollToTop';
 import { RenderRoutes } from './routes/routes';
 import './styles/App.scss';
 import './styles/index.scss';

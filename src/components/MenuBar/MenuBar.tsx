@@ -1,22 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Layout, Menu, Input } from "antd";
 import "./MenuBar.scss";
 import { Link } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 const { Header } = Layout;
 
-export default function MenuBar () {
-  
+export default function MenuBar() {
+  const history = useHistory();
+  const location = useLocation();
+
   const [selectedKey, setSelectedKey] = useState("homepage")
 
-  const onSelectKey = (event: any) => {
-    setSelectedKey((event.key === "menuBarSearch")? selectedKey : event.key);
-  }
+  useEffect(() => {
+    let currentSelectedKey = "homepage";
+
+    if (location.pathname.includes("/article")) {
+      currentSelectedKey = "articles";
+    }
+
+    if (location.pathname.includes("/studyMaterial")) {
+      currentSelectedKey = "studyMaterials"
+    }
+
+    if (location.pathname.includes("/search")) {
+      currentSelectedKey = "menuBarSearch"
+    }
+
+    setSelectedKey(currentSelectedKey)
+  }, [location])
 
   const onSearch = (words: string) => {
     console.log(words);
+    history.replace(`/search?key=${words.replace(/ /g, "_")}`)
   }
-  
+
   return (
     <Header
       className="menuBar"
@@ -24,11 +42,10 @@ export default function MenuBar () {
       <Menu
         theme="light"
         mode="horizontal"
-        onSelect={onSelectKey}
         selectedKeys={[selectedKey]}>
         <Menu.Item
           key="homepage">
-          <Link to="/">Betonamu@</Link>
+          <Link to="/">Beton@mu</Link>
         </Menu.Item>
         <Menu.Item
           key="articles">
@@ -42,9 +59,9 @@ export default function MenuBar () {
         <Menu.Item
           key="menuBarSearch"
           className="menuBarSearch">
-          <Input.Search 
-            placeholder="Looking for something?" 
-            onSearch={onSearch} 
+          <Input.Search
+            placeholder="Looking for something?"
+            onSearch={onSearch}
             enterButton
             allowClear
             className="menuBarSearchInput" />

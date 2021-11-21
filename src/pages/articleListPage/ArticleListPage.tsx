@@ -7,27 +7,27 @@ import PageHeader from "../../components/PageHeader/PageHeader";
 import { articleListMock } from "../../__mocks__/articleMork";
 import image from "./background-article.jpg";
 
-export default function ArticleListPage () {
+export default function ArticleListPage() {
   return (
     <Layout>
-    <PageHeader
-      title="Articles"
-      description="To learn is to read a lot! Let's read!"
-      backgroundImage={image}
-    />
-    <Content>
-      <AppTab
-        title="About Culture"
-        pageLimit={5}
-        dataSource={articleListMock.map((article, index) => {
-          return <AppCard
-            key={index}
-            dataSource={article}
-            link={`/article/${article.id}`} />
-        })
-        }
+      <PageHeader
+        title="Articles"
+        description="To learn is to read a lot! Let's read!"
+        backgroundImage={image}
       />
-    </Content>
-  </Layout>
+      <Content>
+        <AppTab
+          title="About Culture"
+          pageLimit={5}
+          dataSource={articleListMock.map((article, index) => {
+            return <AppCard
+              key={index}
+              dataSource={article}
+              link={`/article/${article.id}`} />
+          })
+          }
+        />
+      </Content>
+    </Layout>
   )
 }

@@ -5,7 +5,7 @@ export interface Article {
   backgroundImg: string | null;
   title: string;
   tag: string[];
-  level: Level
+  level: Level[]
   description: string;
 }
 

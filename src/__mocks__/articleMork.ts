@@ -19,7 +19,7 @@ export const articleListMock : Article[] = Array(11).fill(0).map((_, index) => {
     id: "article" + index,
     title: index + ". Let discuss the " + index + " problem(s) of Japanese",
     backgroundImg: null,
-    level: `N${Math.floor(Math.random() * 4 + 1)}` as unknown as Level,
+    level: [`N${Math.floor(Math.random() * 4 + 1)}` as unknown as Level],
     description: "The article is about japanese and some knowledge should be learn. Let's read this now!",
     tag: generateRandomSubject(index),
   }

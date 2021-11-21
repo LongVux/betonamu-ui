@@ -1,4 +1,4 @@
-import { Typography } from "antd";
+import { Tag, Typography } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Article } from "../../models/article";
@@ -24,6 +24,14 @@ export default function AppCard (props: AppCardProps) {
         >
           {props.dataSource.title}
         </Typography.Paragraph>
+      </div>
+      <div className="cardFooter">
+        {props.dataSource.tag.map(tag => {
+          return <Tag color="#108ee9">{tag}</Tag>
+        })}
+        {props.dataSource.level.map(level => {
+          return <Tag color="#87d068">{level}</Tag>
+        })}
       </div>
     </Link>
   )
