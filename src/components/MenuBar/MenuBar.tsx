@@ -32,7 +32,7 @@ export default function MenuBar() {
 
   const onSearch = (words: string) => {
     console.log(words);
-    history.replace(`/search?key=${words.replace(/ /g, "_")}`)
+    history.replace(`/search/${words}`)
   }
 
   return (

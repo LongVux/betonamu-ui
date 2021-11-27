@@ -21,7 +21,7 @@ export const ROUTES = [
     component: () => <StudyMaterialPage />
   },
   {
-    path: "/studyMaterial/:id", 
+    path: "/studyMaterial/:testType/:id", 
     key: "testpage",
     exact: true,
     component: () => <TestPage />
@@ -39,7 +39,7 @@ export const ROUTES = [
     component: () => <ArticlePage />
   },
   {
-    path: "/search", 
+    path: "/search/:keyword", 
     key: "search",
     exact: true,
     component: () => <SearchPage />
