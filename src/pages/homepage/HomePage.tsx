@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Layout } from "antd";
 import AppTab from "../../components/AppTab/AppTab";
 import PageHeader from "../../components/PageHeader/PageHeader";
@@ -6,14 +6,27 @@ import Carousel from "./Carousel";
 import image from "./homepage-background.jpg"
 import AppCard from "../../components/AppCard/AppCard";
 import { articleListMock } from "../../__mocks__/articleMork";
-import { testListMock } from "../../__mocks__/testMock";
+import { Article } from "../../models/response/article";
+import { getAllArticles } from "../../service/article.service";
 
 const { Content } = Layout;
 
 export default function HomePage() {
 
-  console.log(articleListMock)
-  console.log(testListMock)
+  const [articles, setArticles] = useState([] as Article[])
+
+  useEffect(() => {
+    const getArticle = async () => {
+      const response = await getAllArticles()
+      console.log(response.data)
+
+      setArticles(response.data)
+    }
+
+    getArticle()
+  }, [])
+
+  console.log("reload")
 
   return (
     <Layout>
@@ -24,17 +37,19 @@ export default function HomePage() {
       />
       <Content>
         <Carousel />
-        <AppTab
+        { articles.length > 0 && <AppTab
           title="Top view"
           pageLimit={5}
-          dataSource={articleListMock.map((article, index) => {
+          dataSource={articles.map((article, index) => {
             return <AppCard
               key={index}
-              dataSource={article} 
+              title={article.title}
+              tag={article.tag}
+              level={article.level} 
               link={`/article/${article.id}`}/>
           })
           }
-        />
+        />}
       </Content>
     </Layout>
   )

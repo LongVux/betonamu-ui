@@ -1,17 +1,19 @@
 import { Tag, Typography } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
-import { Article } from "../../models/article";
-import { Test } from "../../models/test";
+import { Article } from "../../models/response/article";
+import { Test } from "../../models/response/test";
 import "./AppCard.scss";
 import image from "./demo-background-image.jpg"
 
 type AppCardProps = {
-  dataSource: Article | Test;
+  title: string,
+  tag: string,
+  level: string,
   link: string;
 }
 
-export default function AppCard (props: AppCardProps) {
+export default function AppCard(props: AppCardProps) {
   return (
     <Link className="appCard" to={props.link}>
       <div className="cardHeader">
@@ -19,19 +21,15 @@ export default function AppCard (props: AppCardProps) {
       </div>
       <div className="cardTitle">
         <Typography.Paragraph
-          style={{width: "100%"}}
-          ellipsis={{rows: 3, tooltip: props.dataSource.title }}
+          style={{ width: "100%" }}
+          ellipsis={{ rows: 3, tooltip: props.title }}
         >
-          {props.dataSource.title}
+          {props.title}
         </Typography.Paragraph>
       </div>
       <div className="cardFooter">
-        {props.dataSource.tag.map(tag => {
-          return <Tag color="#108ee9">{tag}</Tag>
-        })}
-        {props.dataSource.level.map(level => {
-          return <Tag color="#87d068">{level}</Tag>
-        })}
+        <Tag color="#108ee9">{props.tag}</Tag>
+        <Tag color="#87d068">{props.level}</Tag>
       </div>
     </Link>
   )
