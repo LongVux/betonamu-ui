@@ -8,7 +8,7 @@ import image from "./demo-background-image.jpg"
 
 type AppCardProps = {
   title: string,
-  tag: string,
+  tag: string[],
   level: string,
   link: string;
 }
@@ -28,7 +28,11 @@ export default function AppCard(props: AppCardProps) {
         </Typography.Paragraph>
       </div>
       <div className="cardFooter">
-        <Tag color="#108ee9">{props.tag}</Tag>
+        {
+          props.tag.map(tag => (
+            <Tag color="#108ee9">{tag}</Tag>
+          ))
+        }
         <Tag color="#87d068">{props.level}</Tag>
       </div>
     </Link>

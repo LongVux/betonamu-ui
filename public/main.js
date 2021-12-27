@@ -50,6 +50,8 @@ const getPosts = () => {
           description: metadata.description ? metadata.description : "No description given",
           author: metadata.author ? metadata.author : "No author given",
           date: metadata.date ? metadata.date : "No date given",
+          tag: metadata.tag? metadata.tag.split(",") : ["no tag given"],
+          level: metadata.level? metadata.level : "no level given",
           content: content ? content : "No content given"
         }
         postlist.push(post)

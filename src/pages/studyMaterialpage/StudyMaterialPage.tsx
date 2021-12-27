@@ -42,7 +42,7 @@ export default function StudyMaterialPage() {
               return <AppCard
                 key={index}
                 title={test.testName}
-                tag={test.testType}
+                tag={[test.testType]}
                 level={"N5"}
                 link={`/studyMaterial/reading/${test.id}`} />
             })
@@ -58,7 +58,7 @@ export default function StudyMaterialPage() {
               return <AppCard
                 key={index}
                 title={test.testName}
-                tag={test.testType}
+                tag={[test.testType]}
                 level={"N5"}
                 link={`/studyMaterial/listening/${test.id}`} />
             })

@@ -17,10 +17,9 @@ export default function HomePage() {
 
   useEffect(() => {
     const getArticle = async () => {
-      const response = await getAllArticles()
-      console.log(response.data)
+      const response = getAllArticles()
 
-      setArticles(response.data)
+      setArticles(response)
     }
 
     getArticle()

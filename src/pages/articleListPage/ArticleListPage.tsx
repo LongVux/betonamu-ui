@@ -6,26 +6,21 @@ import AppTab from "../../components/AppTab/AppTab";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import { Article } from "../../models/response/article";
 import { getAllArticles } from "../../service/article.service";
-import { articleListMock } from "../../__mocks__/articleMork";
 import image from "./background-article.jpg";
+import postList from "../../posts.json";
 
 export default function ArticleListPage() {
 
-  const [articles, setArticles] = useState([] as Article[])
+  const [articles, setArticles] = useState(postList as Article[])
 
   useEffect(() => {
     const getArticle = async () => {
-      const response = await getAllArticles()
-
-
-      setArticles(response.data)
-      console.log(articles)
+      const response = getAllArticles()
+      setArticles(response)
     }
 
     getArticle()
   }, [])
-
-  console.log("reload")
 
   return (
     <Layout>

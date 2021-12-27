@@ -33,7 +33,7 @@ export default function SearchPage() {
             return <AppCard
               key={index}
               title={article.title}
-              tag={article.tag[0]}
+              tag={article.tag}
               level={article.level.toString()}
               link={`/article/${article.id}`} />
           })
@@ -48,7 +48,7 @@ export default function SearchPage() {
             return <AppCard
               key={index}
               title={test.testName}
-              tag={test.testType}
+              tag={[test.testType]}
               level={"N5"}
               link={`/studyMaterial/${test.id}`} />
           })
@@ -63,7 +63,7 @@ export default function SearchPage() {
             return <AppCard
               key={index}
               title={test.testName}
-              tag={test.testType}
+              tag={[test.testType]}
               level={"N5"}
               link={`/studyMaterial/${test.id}`} />
           })

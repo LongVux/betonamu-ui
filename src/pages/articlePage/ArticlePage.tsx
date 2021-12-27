@@ -1,3 +1,4 @@
+import moment from "moment";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -7,6 +8,8 @@ import postList from "../../posts.json";
 import "./ArticlePage.scss";
 
 export default function ArticlePage() {
+  console.log(postList[0].date)
+  const date = new Date(String(postList[0].date).trim())
 
   return (
     <GeneralLayout
@@ -17,7 +20,8 @@ export default function ArticlePage() {
       metaData={
         <>
           <div>{postList[0].author}</div>
-          <div>{postList[0].date}</div>
+          <div>{date.toLocaleString()}</div>
+          <div>{postList[0].level}</div>
         </>
       }
     > 
