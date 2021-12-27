@@ -1,16 +1,1 @@
-[
-  {
-    "id": 1,
-    "title": "My First Post, Yo\r",
-    "author": "Dave Jones\r",
-    "date": "December 11, 2021\r",
-    "content": "\r\n# Welcome to My Blog\r\n\r\n*It's a beautiful thing.*"
-  },
-  {
-    "id": 2,
-    "title": "My Second Post, Yo\r",
-    "author": "Maria Smith\r",
-    "date": "December 11, 2021\r",
-    "content": "\r\n# Welcome to Maria's Blog\r\n\r\n*It's a beautiful thing.*"
-  }
-]
+[{"id":1,"title":"と particle\r","description":"と is used to connect two or more words together as companions\r","author":"Phillip Nguyen\r","date":"December 11, 2021\r","content":"\r\n<style>\r\norange { color: #cb4b16 }\r\nfaded { color: #818a91 }\r\nbold { font-family: bold }\r\ntext { font-size: 1rem; line-height: 1.75 }\r\nbox {\r\n  margin: 2rem 0;\r\n  padding: 1rem;\r\n  background-color: pastel\r\n}\r\n</style>\r\n\r\n## TABLE OF CONTENTS\r\n\r\n- [<orange>The Basics</orange>](#the-basic)\r\n  - [<orange>と = Together<orange>](#together)\r\n- [<orange>Uses of と </orange>](#uses-of-と)\r\n  - [<orange>と as in \"And\"</orange>](#and)\r\n  - [<orange> と as in \"With\" </orange>](#with)\r\n  - [<orange> と for Listing Options </orange>](#options)\r\n- [<orange> Beyond the Basics </orange>](#beyond-the-basic)\r\n  - [<orange> と for Interactive Actions </orange>](#interactive-actions)\r\n  - [<orange> と for Marking Quotations </orange>](#marking-quotations)\r\n  - [<orange> と for Strong Causal Relationships </orange>](#strong-casual-relationship)\r\n### THE BASICS\r\n<a name='the-basic'></a>\r\n<text>The particle と wears a lot of hats, but its fundamental meaning is quite simple — to connect two or more things together as companions.</text>\r\n\r\n### <faded>と = TOGETHER</faded>\r\n<a name='together'></a>\r\n<text>We like to think of と's fundamental meaning as marking togetherness. Particle と is like a companion marker — when a word is marked by と, we know it's part of a pair or a group, or has some kind of companionship with other words or elements in the sentence.</text></br>\r\n<text>To help drive this point home, let me introduce two penguin companions, ペン太 and ペン子. These penguin pals are always together (or と-gether 😉) because they're great friends:</text><br/>\r\n\r\n![Linux](https://files.tofugu.com/japanese-grammar/particle-to/particle-to-penguins.jpg)\r\n<br/>\r\n```console\r\nJAPANESE\r\n彼女に電話をした。\r\nENGLISH\r\nPenta and Penko are friends.\r\n```\r\n<br/>\r\n<text>\r\nIn this sentence, と comes between the two penguins, ペン太 and ペン子, just like the word \"and.\" As you read on, you'll see that particle と can pop up in different places, and take slightly different meanings. However, keep in mind the togetherness of our penguin pals, and all the different uses will make sense!\r\n</text><br/>\r\n\r\n## Uses of と\r\n<a name='uses-of-と'></a>"},{"id":2,"title":"My Second Post, Yo\r","description":"と is used to connect two or more words together as companions\r","author":"Maria Smith\r","date":"December 11, 2021\r","content":"\r\n# Welcome to Maria's Blog\r\n\r\n*It's a beautiful thing.*"}]

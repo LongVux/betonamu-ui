@@ -47,6 +47,7 @@ const getPosts = () => {
         post = {
           id: i + 1,
           title: metadata.title ? metadata.title : "No title given",
+          description: metadata.description ? metadata.description : "No description given",
           author: metadata.author ? metadata.author : "No author given",
           date: metadata.date ? metadata.date : "No date given",
           content: content ? content : "No content given"
