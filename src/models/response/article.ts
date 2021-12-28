@@ -4,5 +4,8 @@ export type Article = {
   tag: string[],
   level: string,
   description: string,
-  pictureSource?: string
+  pictureSource?: string,
+  date: string,
+  author: string,
+  content: string
 }

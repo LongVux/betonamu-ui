@@ -36,16 +36,18 @@ export default function HomePage() {
       />
       <Content>
         <Carousel />
-        { articles.length > 0 && <AppTab
+        {articles.length > 0 && <AppTab
           title="Top view"
           pageLimit={5}
           dataSource={articles.map((article, index) => {
-            return <AppCard
-              key={index}
-              title={article.title}
-              tag={article.tag}
-              level={article.level} 
-              link={`/article/${article.id}`}/>
+            return <div key={article.id}>
+              <AppCard
+                key={index}
+                title={article.title}
+                tag={article.tag}
+                level={article.level}
+                link={`/article/${article.id}`} />
+            </div>
           })
           }
         />}

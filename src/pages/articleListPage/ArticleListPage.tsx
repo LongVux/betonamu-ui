@@ -36,12 +36,12 @@ export default function ArticleListPage() {
             title="About Culture"
             pageLimit={5}
             dataSource={articles.map((article, index) => {
-              return <AppCard
+              return <div key={article.id}><AppCard
                 key={index}
                 title={article.title}
                 tag={article.tag}
                 level={article.level}
-                link={`/article/${article.id}`} />
+                link={`/article/${index}`} /></div>
             })
             }
           />}

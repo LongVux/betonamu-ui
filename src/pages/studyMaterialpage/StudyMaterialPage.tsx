@@ -55,12 +55,12 @@ export default function StudyMaterialPage() {
             title="Listening Test"
             pageLimit={5}
             dataSource={listeningTests.map((test, index) => {
-              return <AppCard
+              return <div key={test.id}><AppCard
                 key={index}
                 title={test.testName}
                 tag={[test.testType]}
                 level={"N5"}
-                link={`/studyMaterial/listening/${test.id}`} />
+                link={`/studyMaterial/listening/${test.id}`} /></div>
             })
             }
           />}
