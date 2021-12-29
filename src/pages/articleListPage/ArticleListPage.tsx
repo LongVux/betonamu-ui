@@ -41,7 +41,7 @@ export default function ArticleListPage() {
                 title={article.title}
                 tag={article.tag}
                 level={article.level}
-                link={`/article/${index}`} /></div>
+                link={`/article/${article.id}`} /></div>
             })
             }
           />}
