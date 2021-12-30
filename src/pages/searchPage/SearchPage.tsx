@@ -63,7 +63,7 @@ export default function SearchPage() {
               title={test.testName}
               tag={[test.testType]}
               level={"N5"}
-              link={`/studyMaterial/${test.id}`} />
+              link={`/studyMaterial/reading/${test.id}`} />
           })
           }
         />}
@@ -78,7 +78,7 @@ export default function SearchPage() {
               title={test.testName}
               tag={[test.testType]}
               level={"N5"}
-              link={`/studyMaterial/${test.id}`} />
+              link={`/studyMaterial/listening/${test.id}`} />
           })
           }
         />}

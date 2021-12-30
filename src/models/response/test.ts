@@ -18,4 +18,6 @@ export type Test = {
   testType: string,
   testName: string,
   questionList: Question[],
+  paragraph?: string,
+  audioSource?: string
 }

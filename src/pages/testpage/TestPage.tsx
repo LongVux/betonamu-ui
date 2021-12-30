@@ -1,9 +1,10 @@
-import { Button, Form, Modal } from "antd";
+import { Affix, Button, Form, Modal } from "antd";
 import { useForm } from "antd/lib/form/Form";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router";
 import PageHeader from "../../components/PageHeader/PageHeader";
 import QuestionCard from "../../components/QuestionCard/QuestionCard";
+import Timer from "../../components/Timer/Timer";
 import GeneralLayout from "../../layouts/generalLayout/GeneralLayout";
 import { Test } from "../../models/response/test";
 import { calcResult, getListeningTest, getReadingTest } from "../../service/test.service";
@@ -35,9 +36,7 @@ export default function TestPage() {
   }, [])
 
   const onFinish = (value: any) => {
-    console.log(value)
     const result = calcResult(value, test)
-    console.log(result)
     setResult(result)
     setEditable(false);
     setOpenModal(true);
@@ -52,7 +51,7 @@ export default function TestPage() {
           description="Challenge yourself! - Sharpen you skills!"
         />}
         metaData={
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus libero nulla, pretium vitae volutpat id, porttitor eget turpis. Suspendisse accumsan neque at tellus malesuada, a vehicula est congue. Sed aliquet volutpat diam, vulputate facilisis felis ornare ac. Sed egestas augue eu dui iaculis vehicula iaculis a arcu."
+          <Timer />
         }
       >
         <Form
@@ -60,6 +59,13 @@ export default function TestPage() {
           form={form}
           className="test-form"
         >
+
+          <div className="test-problem">
+            {(params.testType === "reading") ? test.paragraph :
+              <div dangerouslySetInnerHTML={{__html: (test.audioSource === undefined)? "" : test.audioSource}} />
+            }
+          </div>
+
           {test.questionList.map(
             (question, i) =>
               <QuestionCard

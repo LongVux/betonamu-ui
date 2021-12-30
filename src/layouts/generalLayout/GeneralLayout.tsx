@@ -1,4 +1,4 @@
-import { Layout } from "antd";
+import { Affix, Layout } from "antd";
 import { Content } from "antd/lib/layout/layout";
 import React from "react";
 import "./GeneralLayout.scss";
@@ -18,9 +18,12 @@ export default function GeneralLayout(props: GeneralLayoutProps) {
       </div>
       {
         props.metaData &&
-        <div className="sideContent">
-          {props.metaData}
-        </div>
+        <Affix offsetTop={200} className="sideContent">
+          <div>
+            {props.metaData}
+          </div>
+        </Affix>
+
       }
     </Content>
   </Layout>
